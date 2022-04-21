@@ -1,10 +1,8 @@
 function calcShipping(sum, min, shipping) {
     let productsSum = sum; // сумма в корзине
     let freeShippingMinSum = min; // минимальная цена для бесплатной доставки
-        min = 700;
     let shippingPrice = shipping; // стоимость доставки
-        shipping = 200;
-            
+   
     // Задание №2.1. Рассчитать доставку
 
     // создайте переменную shippingSum
@@ -69,11 +67,10 @@ function calcInvoice({sum, discountMinSum, discountPart, shippingFreeMinSum, shi
     // Задача №2.3. Рассчитать скидки и доставку в корзине
 
     // создайте переменную totalSum
-    let totalSum = 0;
 
     // присвойте totalSum значение productsSum
     // уменьшите totalSum на discountSum
-    totalSum = productsSum;
+    let totalSum = productsSum;
     totalSum -= discountSum;
 
     let shippingSum = calcShipping(totalSum, shippingFreeMinSum, shippingPrice); // не изменяйте эту строку!!!
